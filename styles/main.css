@@ -762,4 +762,9 @@ button[aria-label]::before {
   .footer__socials {
     order: -1;
   }
+}
+
+.header,
+.footer {
+  display: none !important;
 }/*# sourceMappingURL=main.css.map */
