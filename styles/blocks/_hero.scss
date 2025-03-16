@@ -4,6 +4,6 @@
 .hero {
     &&__main {
         display: grid;
-        grid-template-columns: ;
+        grid-template-columns: var(2, 3);
     }
 }
