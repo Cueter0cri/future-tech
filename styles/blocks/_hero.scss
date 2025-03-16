@@ -2,8 +2,23 @@
 
 
 .hero {
-    &&__main {
+    &__main {
         display: grid;
-        grid-template-columns: var(2, 3);
+        grid-template-columns: 60% auto;
+        grid-template-areas: 
+            'body resources-preview' 
+            'metrics resources-preview';
+    }
+
+    &__body {
+        grid-area: body;
+    }
+
+    &__metrics {
+        grid-area: metrics;
+    }
+
+    &__resources-preview {
+        grid-area: resources-preview;
     }
 }

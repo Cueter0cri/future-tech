@@ -764,6 +764,21 @@ button[aria-label]::before {
   }
 }
 
+.hero__main {
+  display: grid;
+  grid-template-columns: 60% auto;
+  grid-template-areas: "body resources-preview" "metrics resources-preview";
+}
+.hero__body {
+  grid-area: body;
+}
+.hero__metrics {
+  grid-area: metrics;
+}
+.hero__resources-preview {
+  grid-area: resources-preview;
+}
+
 .header,
 .footer {
   display: none !important;
