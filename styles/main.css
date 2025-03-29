@@ -407,9 +407,8 @@ button[aria-label] {
 a[aria-label]::before,
 button[aria-label]::before {
   position: absolute;
-  top: 50%;
   left: 50%;
-  translate: -50% -50%;
+  translate: -50%;
   width: 2.75rem;
   height: 2.75rem;
   content: "";
@@ -820,6 +819,25 @@ button[aria-label]::before {
   display: grid;
   row-gap: 1.875rem;
 }
+.advantage-card__link {
+  --circleSize: 3.25rem;
+  --circleMarginLeft: 1.25rem;
+  position: relative;
+  display: grid;
+  row-gap: 0.25rem;
+  padding-right: calc(var(--circleSize) + var(--circleMarginLeft));
+}
+.advantage-card__link::after {
+  width: var(--circleSize);
+  height: var(--circleSize);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  content: "";
+  right: 0;
+}
+
 .hero__main {
   display: grid;
   grid-template-columns: 60% auto;
