@@ -407,8 +407,9 @@ button[aria-label] {
 a[aria-label]::before,
 button[aria-label]::before {
   position: absolute;
+  top: 50%;
   left: 50%;
-  translate: -50%;
+  translate: -50% -50%;
   width: 2.75rem;
   height: 2.75rem;
   content: "";
@@ -832,10 +833,11 @@ button[aria-label]::before {
   height: var(--circleSize);
   position: absolute;
   top: 50%;
-  left: 50%;
-  translate: -50% -50%;
+  translate: 0 -50%;
   content: "";
   right: 0;
+  background: url(../../icons/arrow-top-right_black.svg) center no-repeat var(--colot-accent);
+  border-radius: 50%;
 }
 
 .hero__main {
