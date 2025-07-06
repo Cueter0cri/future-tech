@@ -969,9 +969,4 @@ button[aria-label]::before {
 .hero__advantages-item:not(:last-child) {
   padding-right: var(--paddingX);
   border-right: var(--border);
-}
-
-.header,
-.footer {
-  display: none !important;
 }/*# sourceMappingURL=main.css.map */
