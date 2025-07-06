@@ -3,11 +3,15 @@
 
 .hero {
     &__main {
-        display: grid;
-        grid-template-columns: 60% auto;
-        grid-template-areas: 
-            'body resources-preview' 
-            'metrics resources-preview';
+        @include tablet-above {
+            display: grid;
+            grid-template-columns: 60% auto;
+            grid-template-areas: 
+                'body resources-preview' 
+                'metrics resources-preview';
+    
+        }
+        
     }
 
     &__body {
@@ -20,6 +24,12 @@
             padding-top: rem(100);
             padding-right: rem(40);
         }
+
+        @include tablet {
+            padding-right: 0;
+            padding-top: rem(40);
+            padding-bottom: rem(30);
+        }
     }
 
     &__subtitle {
@@ -31,19 +41,36 @@
 
         &:not(:last-child) {
             margin-bottom: rem(30);
+
+            @include mobile {
+                margin-bottom: rem(14);
+            }
         }
     }
 
     &__title {
         &:not(:last-child) {
             margin-bottom: rem(20);
+
+            @include mobile {
+                margin-bottom: rem(10);
+            }
         }
     }
 
     &__metrics {
         grid-area: metrics;
-        border-top: var(--border);
 
+        @include tablet-above {
+            border-top: var(--border);
+        }
+
+        @include tablet {
+            &::before {
+                width: 100vw;
+                right: calc(var(--container-padding-x) * -1);
+            }
+        }
         
         
     }
